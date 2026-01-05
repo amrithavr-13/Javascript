@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p id ="test"></p>
+<script language = "javascript" type = "text/javascript">
+var x=5; 
+var y= 400; 
+var z=3;
+var k=150;
+function earnings(tshirt_numb,tshirt_price,cap_numb,cap_price){
+    return((tshirt_numb*tshirt_price)+(cap_numb*cap_price))
+}
+sum_1=earnings(x,y,z,k);
+y=450;
+sum_2=earnings(x,y,z,k);
+
+document.getElementById("test").innerHTML = sum_2;
+</script>
+</body>
+</html>
