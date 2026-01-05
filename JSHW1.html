@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script language = "javascript" type = "text/javascript">
+var itemName1="Rice"; 
+var itemPrice1= 40; 
+var itemQuanty1=7;
+var itemName2="Sugar"; 
+var itemPrice2= 50; 
+var itemQuanty2= 2;
+var itemName3="Wheat"; 
+var itemPrice3= 45; 
+var itemQuanty3= 3;
+function bill(y_1,z_1,y_2,z_2,y_3,z_3){
+    return((y_1*z_1)+(y_2*z_2)+(y_3*z_3))
+}
+sum_1=bill(itemPrice1,itemQuanty1,itemPrice2,itemQuanty2,itemPrice3,itemQuanty3);
+itemQuanty2=3;
+sum_2=bill(itemPrice1,itemQuanty1,itemPrice2,itemQuanty2,itemPrice3,itemQuanty3);
+console.log("bill:"+sum_1);
+console.log("updated bill:"+sum_2);
+</script>
+</body>
+</html>
