@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<script>
+let contact1 = { 
+    name: "Amritha", 
+    phone:'9447093rr4',
+    e_mail: "amr45@gmail.som",
+    getInfo: function() { console.log(this.name + ' , ' + this.phone+' , '+this.e_mail); }
+}
+let contact2 = { 
+    name: "Aparna", 
+    phone:'944703ssd4',
+    e_mail: "apar45@gmail.som",
+    getInfo: function() { console.log(this.name + ' , ' + this.phone+' , '+this.e_mail); }
+}
+function printContactInfo(contact){
+   console.log(contact.getInfo())
+}
+printContactInfo(contact1)
+printContactInfo(contact2)
+
+</script>
+</body>
+</html>
