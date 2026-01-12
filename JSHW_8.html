@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Switch Statement</h2>
+
+<script>
+var i=0,x;
+while(i<5){
+    x = parseInt(prompt('Enter the number'));
+    switch (x) {
+            case 1:
+                console.log("one")
+                break;
+            case 2:
+                console.log("Two")
+                break;
+            case 3:
+                console.log("Three")
+                break;
+            case 4:
+                console.log("Four")
+                break;
+            case 5:
+                console.log("Five")
+                break;
+            default:
+                console.log("Invalid number")
+                break;
+    }
+    if (x==3){
+        console.log(`You guessed it right....exiting`);
+        break
+    }
+    else if(x<6 && x>0){
+        console.log(`wrong guess.Try Again`)
+        i+=1;
+    }
+    else{
+        continue;
+    }   
+}
+if(i==5){
+    console.log(`GAME OVER`)
+}
+</script>
+
+</body>
+</html>
