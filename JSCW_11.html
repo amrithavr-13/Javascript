@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book System</title>
+</head>
+<body>
+
+<script>
+class Book {
+    constructor(title, author, price) {
+        this.title = title;
+        this.author = author;
+        this.price = price; 
+    }
+    getTitle() {
+        return this.title;
+    }
+    getAuthor() {
+        return this.author;
+    }
+    setPrice(newPrice) {
+        if (typeof newPrice === "number" && newPrice > 0) {
+            this.price = newPrice;
+            console.log("Price updated successfully.");
+        } else {
+            console.log("Invalid price. Must be a number greater than 0.");
+        }
+    }
+    getPrice(){
+        return this.price;
+    }
+    displayBookDetails() {
+        console.log(`Title  : ${this.getTitle()}`);
+        console.log(`Author : ${this.getAuthor()}`);
+        console.log(`Price  : ${this.getPrice()}`);
+    }
+}
+let myBook = new Book("Clean Code", "Robert C. Martin", 450);
+myBook.setPrice(-200); 
+myBook.setPrice(500);
+console.log("Book Details:");
+myBook.displayBookDetails();
+</script>
+
+</body>
+</html>
+
