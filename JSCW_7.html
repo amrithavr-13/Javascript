@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let friend = {
+  name: "John",
+  birthDate: "1999-07-05"
+};
+function getBirthdayDetails() {
+  
+  var birthDateObj = new Date(friend.birthDate);
+  var today = new Date();
+  var year = birthDateObj.getFullYear();
+  var day = birthDateObj.getDate();
+  var monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  var month = monthNames[birthDateObj.getMonth()];
+  var age = today.getFullYear() - year;
+  var hasHadBirthdayThisYear =today.getMonth() > birthDateObj.getMonth() ||(today.getMonth() === birthDateObj.getMonth() && today.getDate() >= day);
+  if (!hasHadBirthdayThisYear) {
+    age--;
+  }
+  console.log(`${friend.name} was born on ${day} ${month}, ${year} and is ${age} years old.`);
+}
+getBirthdayDetails();
+
+</script>
+</body>
+</html>
