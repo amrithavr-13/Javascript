@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TEXT FORM</title>
+</head>
+<body>
+
+    <form id="textForm">
+        <input type="text" id="textBox" placeholder="Enter text">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="Text"></p>
+
+    <script>
+        const form = document.getElementById("textForm");
+        const textBox = document.getElementById("textBox");
+        const paragraph = document.getElementById("Text");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();         
+            paragraph.textContent = textBox.value;
+            paragraph.style.color = "blue";
+        });
+        paragraph.addEventListener("mouseover", function () {
+            paragraph.style.color = "green";
+        });
+        paragraph.addEventListener("mouseout", function () {
+            paragraph.style.color = "blue";
+        });
+    </script>
+
+</body>
+</html>
