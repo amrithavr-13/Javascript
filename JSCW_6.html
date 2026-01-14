@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="Position"></p>
+<p id="wordArray"></p>
+
+<script>
+  var feedback = " I loved the FOOD and the service ! ";
+
+  feedback = feedback.trim();
+
+  feedback = feedback.toLowerCase();
+
+  feedback = feedback.replace("food", "ambience");
+
+  var position = feedback.indexOf("service");
+  var wordsArray = feedback.split(" ");
+
+  
+  document.getElementById("demo").innerHTML = "Processed Feedback: " + feedback;
+  document.getElementById("servicePosition").innerHTML = "Position of 'service': " + position;
+  document.getElementById("wordArray").innerHTML = "["+wordsArray+"]"
+</script>
+
+</body>
+</html>
